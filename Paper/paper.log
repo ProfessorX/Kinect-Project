@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.19)  19 JAN 2014 17:16
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.19)  22 JAN 2014 18:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **\input paper.tex
-(./paper.tex (./sig-alternate.cls
+(./paper.tex (./sig-alternate-10pt.cls
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 
@@ -111,8 +111,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
 )
-Document Class 'sig-alternate' <26th. July '05>. Modified by G.K.M. Tobin/Gerry
- Murray
+Document Class 'sig-alternate' <22nd. April '09>. Modified by G.K.M. Tobin/Gerr
+y Murray
 Based in part upon document Style `acmconf' <22 May 89>. Hacked 4/91 by
 shivers@cs.cmu.edu, 4/93 by theobald@cs.mcgill.ca
 Excerpts were taken from (Journal Style) 'esub2acm.cls'.
@@ -139,7 +139,11 @@ Questions on the style, SIGS policies, etc. to Adrienne Griscti griscti@acm.org
 \c@table=\count99
 \titleboxnotes=\toks23
 \titleboxnoteflag=\count100
-Document Class: sig-alternate 2005/26/07 - V1.8 - based on acmproc.cls V1.3 <No
+
+LaTeX Warning: You have requested document class `sig-alternate-10pt',
+               but the document class provides `sig-alternate'.
+
+Document Class: sig-alternate 2009/04/22 - V2.4 - based on acmproc.cls V1.3 <No
 v. 30 '99>
 (/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
@@ -155,9 +159,8 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \tntoksfour=\toks27
 \tntoksfive=\toks28
 \catcount=\count102
-\copyrightnotice=\toks29
-\conf=\toks30
-\confinfo=\toks31
+\conf=\toks29
+\confinfo=\toks30
 \c@part=\count103
 \c@section=\count104
 \c@subsection=\count105
@@ -165,14 +168,27 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 \c@paragraph=\count107
 
 Using 'Abbrev' bibliography style
+LaTeX Info: Redefining \cite on input line 1223.
 \bibindent=\dimen122
 \colcntr=\count108
-\savebox=\box29
-\copyrtyr=\toks32
-\acmcopyr=\toks33
-\boilerplate=\toks34
-\copyrightetc=\toks35
-) (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+\saveb@x=\box29
+\copyrtyr=\toks31
+\acmcopyr=\toks32
+\boilerplate=\toks33
+\copyrightetc=\toks34
+(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+)
+LaTeX Font Info:    Try loading font information for T1+aer on input line 100.
+
+(/usr/share/texlive/texmf-dist/tex/latex/ae/t1aer.fd
+File: t1aer.fd 1997/11/16 Font definitions for T1/aer.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
@@ -184,15 +200,15 @@ nment
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count109
-\float@exts=\toks36
+\float@exts=\toks35
 \float@box=\box30
-\@float@everytoks=\toks37
+\@float@everytoks=\toks36
 \@floatcapt=\box31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\@float@every@algorithm=\toks38
+\@float@every@algorithm=\toks37
 \c@algorithm=\count110
 )
 (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
@@ -250,7 +266,7 @@ LaTeX Font Info:    Redeclaring math symbol \ocircle on input line 240.
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen123
 \extrarowheight=\dimen124
-\NC@list=\toks39
+\NC@list=\toks38
 \extratabsurround=\skip47
 \backup@length=\skip48
 )
@@ -268,29 +284,6 @@ Package color Info: Driver file: pdftex.def on input line 130.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
-
-
-Package subfigure Warning: Your document class has a bad definition
- of \endfigure, most likely
- \let\endfigure=\end@float
- which has now been changed to
- \def\endfigure{\end@float}
- because otherwise subsequent changes to \end@float
- (like done by several packages changing float behaviour)
- can't take effect on \endfigure.
- Please complain to your document class author.
-
-
-Package subfigure Warning: Your document class has a bad definition
- of \endtable, most likely
- \let\endtable=\end@float
- which has now been changed to
- \def\endtable{\end@float}
- because otherwise subsequent changes to \end@float
- (like done by several packages changing float behaviour)
- can't take effect on \endtable.
- Please complain to your document class author.
-
 \subfigtopskip=\skip49
 \subfigcapskip=\skip50
 \subfigcaptopadj=\dimen125
@@ -301,6 +294,7 @@ Package subfigure Warning: Your document class has a bad definition
 \c@lofdepth=\count119
 \c@subtable=\count120
 \c@lotdepth=\count121
+
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
@@ -329,7 +323,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count122
 \lst@gtempboxa=\box32
-\lst@token=\toks40
+\lst@token=\toks39
 \lst@length=\count123
 \lst@currlwidth=\dimen127
 \lst@column=\count124
@@ -357,7 +351,7 @@ Package: listings 2007/02/22 1.4 (Carsten Heinz)
 (/usr/share/texmf/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks41
+\pgfutil@everybye=\toks40
 )
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box34
@@ -376,11 +370,11 @@ Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
 Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
 
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks42
-\pgfkeys@temptoks=\toks43
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
 
 (/usr/share/texmf/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks44
+\pgfkeys@tmptoks=\toks43
 ))
 \pgf@x=\dimen131
 \pgf@y=\dimen132
@@ -426,9 +420,9 @@ Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
 \pgfmath@dimen=\dimen139
 \pgfmath@count=\count136
 \pgfmath@box=\box35
-\pgfmath@toks=\toks45
-\pgfmath@stack@operand=\toks46
-\pgfmath@stack@operation=\toks47
+\pgfmath@toks=\toks44
+\pgfmath@stack@operand=\toks45
+\pgfmath@stack@operation=\toks46
 )
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (/usr/share/texmf/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
@@ -540,8 +534,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
 \pgffor@iter=\dimen165
 \pgffor@skip=\dimen166
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
+\pgffor@stack=\toks47
+\pgffor@toks=\toks48
 ))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
@@ -609,12 +603,12 @@ LaTeX Font Info:    ... okay on input line 50.
 \scratchbox=\box43
 \nofMPsegments=\count155
 \nofMParguments=\count156
-\everyMPshowfont=\toks50
+\everyMPshowfont=\toks49
 \MPscratchCnt=\count157
 \MPscratchDim=\dimen175
 \MPnumerator=\count158
 \makeMPintoPDFobject=\count159
-\everyMPtoPDFconversion=\toks51
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -698,71 +692,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--88
 
  []
 
-(./intro.tex [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+(./intro.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (1.24661pt too wide) in paragraph at lines 4--17
+\T1/aer/m/n/10 struc-tion build-ings as re-spon-si-ble of a sig-nif-i-cant amou
+nt
+ []
+
+
+Overfull \hbox (1.65576pt too wide) in paragraph at lines 39--43
+\T1/aer/m/n/10 mul-ti-ple Mi-crosoft Kinect for Win-dows (K4W) sen-
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
+Overfull \hbox (2.17729pt too wide) in paragraph at lines 43--52
+\T1/aer/m/n/10 room cor-re-la-tions and oc-cu-pant us-age. Un-like most
+ []
+
 
 LaTeX Warning: Reference `sec:evaluation' on page 2 undefined on input line 67.
 
 
 ) (./background.tex
-Overfull \hbox (14.24547pt too wide) in paragraph at lines 17--18
-\OT1/cmr/m/n/9 mer-cial sys-tems to count peo-ple in-door and out-door.Remarkab
-le
+Overfull \hbox (1.58704pt too wide) in paragraph at lines 5--6
+\T1/aer/m/n/10 man de-tec-tion and track-ing ap-proaches and re-lated tech-
  []
 
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-<./images/k4w350.png, id=15, 231.86626pt x 134.75343pt>
+[2] <./images/k4w350.png, id=20, 231.86626pt x 134.75343pt>
 File: ./images/k4w350.png Graphic file (type png)
 
 <use ./images/k4w350.png>
 Package pdftex.def Info: ./images/k4w350.png used on input line 24.
 (pdftex.def)             Requested size: 215.99854pt x 125.53323pt.
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-) (./mcdesign.tex [2]
-Overfull \hbox (25.79991pt too wide) in paragraph at lines 9--11
-\OT1/cmr/m/n/9 pancy in each zone be based on a thresh-old vec-tor $(\OML/cmm/m
-/it/9 say\OT1/cmr/m/n/9 [0\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 5\OML/cmm/m/it/9 ; \
-OT1/cmr/m/n/9 10\OML/cmm/m/it/9 ; \OT1/cmr/m/n/9 15])$.
+) (./mcdesign.tex
+Overfull \hbox (4.09926pt too wide) in paragraph at lines 29--1
+\T1/aer/m/n/10 Kinect pro-gram-ming in PC‚Äôs run by Win-dows, Linux,
  []
 
 
-Overfull \hbox (5.72067pt too wide) in paragraph at lines 18--35
+Overfull \hbox (5.71497pt too wide) in paragraph at lines 18--35
  [][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./images/k4w350.png (PNG copy)>]
-<./images/numberofkinect.png, id=31, 413.8662pt x 274.626pt>
+[3 <./images/k4w350.png (PNG copy)>]
+<./images/numberofkinect.png, id=33, 413.8662pt x 274.626pt>
 File: ./images/numberofkinect.png Graphic file (type png)
 
 <use ./images/numberofkinect.png>
 Package pdftex.def Info: ./images/numberofkinect.png used on input line 94.
 (pdftex.def)             Requested size: 215.99854pt x 143.33014pt.
-
-<./images/t1.png, id=33, 389.7762pt x 37.5804pt>
+ [4 <./images/numberofkinect.png>]
+<./images/t1.png, id=40, 389.7762pt x 37.5804pt>
 File: ./images/t1.png Graphic file (type png)
  <use ./images/t1.png>
 Package pdftex.def Info: ./images/t1.png used on input line 155.
 (pdftex.def)             Requested size: 215.99854pt x 20.82582pt.
 
-<./images/t2.png, id=34, 389.7762pt x 37.5804pt>
+<./images/t2.png, id=41, 389.7762pt x 37.5804pt>
 File: ./images/t2.png Graphic file (type png)
  <use ./images/t2.png>
 Package pdftex.def Info: ./images/t2.png used on input line 162.
 (pdftex.def)             Requested size: 215.99854pt x 20.82582pt.
- [4 <./images/numberofkinect.png> <./images/t1.png> <./images/t2.png>]
-<./images/t4.png, id=41, 377.2494pt x 233.1912pt>
+
+Overfull \hbox (3.27867pt too wide) in paragraph at lines 166--167
+[]\T1/aer/m/n/10 For this prob-lem, there are 16 pos-si-ble com-bined states
+ []
+
+
+Overfull \hbox (3.01622pt too wide) in paragraph at lines 166--167
+\T1/aer/m/n/10 called state vec-tors. The tran-si-tion ma-trix that is formed
+ []
+
+
+Overfull \hbox (3.64095pt too wide) in paragraph at lines 166--167
+\T1/aer/m/n/10 taken, and the el-e-ment at (row-number, column-number)
+ []
+
+<./images/t4.png, id=42, 377.2494pt x 233.1912pt>
 File: ./images/t4.png Graphic file (type png)
  <use ./images/t4.png>
 Package pdftex.def Info: ./images/t4.png used on input line 171.
@@ -772,150 +783,111 @@ Overfull \hbox (4.92987pt too wide) in paragraph at lines 179--179
 []\secfnt Kinect-based Oc-cu-pancy Counter soft-ware 
  []
 
-
-Overfull \hbox (5.0513pt too wide) in paragraph at lines 180--181
-\OT1/cmr/m/n/9 crosoft Vi-sual $\OML/cmm/m/it/9 C]$ \OT1/cmr/m/n/9 2010, projec
-t WPF ap-pli-ca-tion pro-grammed
- []
-
-<./images/112200.png, id=42, 423.0204pt x 117.0774pt>
+<./images/112200.png, id=43, 423.0204pt x 117.0774pt>
 File: ./images/112200.png Graphic file (type png)
 
 <use ./images/112200.png>
 Package pdftex.def Info: ./images/112200.png used on input line 184.
 (pdftex.def)             Requested size: 215.99854pt x 59.78014pt.
- <./images/swm.png, id=43, 445.665pt x 294.3798pt>
+ [5 <./images/t1.png> <./images/t2.png> <./images/t4.png>] <./images/swm.png, i
+d=50, 445.665pt x 294.3798pt>
 File: ./images/swm.png Graphic file (type png)
-
-<use ./images/swm.png>
+ <use ./images/swm.png>
 Package pdftex.def Info: ./images/swm.png used on input line 194.
 (pdftex.def)             Requested size: 215.99854pt x 142.6752pt.
- <./images/minisys.png, id=44, 414.8298pt x 279.444pt>
+
+Overfull \hbox (10.25764pt too wide) in paragraph at lines 199--201
+\T1/aer/m/n/10 imag-ing are cap-tured. Col-orIm-age-FrameReadyEven-
+ []
+
+<./images/minisys.png, id=51, 414.8298pt x 279.444pt>
 File: ./images/minisys.png Graphic file (type png)
 
 <use ./images/minisys.png>
 Package pdftex.def Info: ./images/minisys.png used on input line 209.
 (pdftex.def)             Requested size: 215.99854pt x 145.50359pt.
 
-Overfull \hbox (14.0598pt too wide) in paragraph at lines 217--218
-[]\OT1/cmr/m/n/9 A hu-man mo-bil-ity de-tec-tion sys-tem was im-ple-mented thro
-ugh
- []
-
-[5 <./images/t4.png> <./images/112200.png> <./images/swm.png> <./images/minisys
-.png>] <./images/realworld.png, id=52, 453.8556pt x 550.2156pt>
+<./images/realworld.png, id=52, 453.8556pt x 550.2156pt>
 File: ./images/realworld.png Graphic file (type png)
 
 <use ./images/realworld.png>
 Package pdftex.def Info: ./images/realworld.png used on input line 221.
 (pdftex.def)             Requested size: 215.99854pt x 261.85886pt.
-) (./savings.tex
-Overfull \hbox (15.80232pt too wide) in paragraph at lines 23--25
-\OT1/cmr/m/n/9 ci-ety of Heat-ing, Re-frig-er-at-ing and Air-Conditioning (ASHR
-AE)
+) (./savings.tex [6 <./images/112200.png> <./images/swm.png> <./images/minisys.
+png> <./images/realworld.png>]
+Overfull \hbox (6.97597pt too wide) in paragraph at lines 6--7
+\T1/aer/m/n/10 dows (K4W) sen-sor by our de-vel-oped Occupancy-Counter
  []
 
-<./images/zonedivided.png, id=53, 291.489pt x 414.8298pt>
+<./images/zonedivided.png, id=60, 291.489pt x 414.8298pt>
 File: ./images/zonedivided.png Graphic file (type png)
 
 <use ./images/zonedivided.png>
 Package pdftex.def Info: ./images/zonedivided.png used on input line 28.
 (pdftex.def)             Requested size: 215.99854pt x 307.39966pt.
 
-Underfull \vbox (badness 1558) has occurred while \output is active []
+Overfull \hbox (5.24663pt too wide) in paragraph at lines 33--34
+\T1/aer/m/n/10 run-ning time. We used the Mas-dar En-ergy De-sign Guide-
+ []
 
- [6 <./images/realworld.png>] <./images/energysavings.png, id=58, 379.6584pt x 
-257.763pt>
+<./images/energysavings.png, id=61, 379.6584pt x 257.763pt>
 File: ./images/energysavings.png Graphic file (type png)
 
 <use ./images/energysavings.png>
 Package pdftex.def Info: ./images/energysavings.png used on input line 39.
 (pdftex.def)             Requested size: 215.99854pt x 146.64719pt.
-) (./relatedwork.tex
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
- [7 <./images/zonedivided.png> <./images/energysavings.png>]
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
+ [7]) (./relatedwork.tex
+Overfull \hbox (8.25685pt too wide) in paragraph at lines 4--5
+\T1/aer/m/n/10 lated to our ap-proach in analysing hu-man mo-bil-ity. Build-
+ []
 
-Underfull \vbox (badness 1558) has occurred while \output is active []
+[8 <./images/zonedivided.png> <./images/energysavings.png>]
+Underfull \vbox (badness 4229) has occurred while \output is active []
 
- [8]
-Missing character: There is no ‚ in font cmr9!
-Missing character: There is no Ä in font cmr9!
-Missing character: There is no ô in font cmr9!
+
+Overfull \hbox (5.10698pt too wide) in paragraph at lines 14--15
+[]\T1/aer/m/n/10 In the work ti-tled Occupancy-Based De-mand Re-sponse
+ []
+
+
+Underfull \vbox (badness 6396) has occurred while \output is active []
+
+ [9]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 )
-(./conclusion.tex) (./paper.bbl [9]
-Missing character: There is no Ô in font cmr9!
-Missing character: There is no ¨ in font cmr9!
-Missing character: There is no Å in font cmr9!
-) [10
-
-] (./paper.aux)
+(./conclusion.tex [10]) (./paper.bbl) [11] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13664 strings out of 493485
- 239222 string characters out of 3143525
- 287470 words of memory out of 3000000
- 16598 multiletter control sequences out of 15000+200000
- 28990 words of font info for 61 fonts, out of 3000000 for 9000
+ 13962 strings out of 493485
+ 241986 string characters out of 3143525
+ 290332 words of memory out of 3000000
+ 16855 multiletter control sequences out of 15000+200000
+ 61190 words of font info for 99 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,17n,62p,3990b,909s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,17n,62p,3990b,915s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (10 pages, 4102065 bytes).
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
+utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (11 pages, 4152359 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 69 compressed objects within 1 object stream
+ 132 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  74 words of extra memory for PDF output out of 10000 (max. 10000000)
 

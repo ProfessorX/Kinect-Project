@@ -1,7 +1,7 @@
 (TeX-add-style-hook "paper"
  (lambda ()
     (LaTeX-add-bibliographies
-     "bibliography")
+     "reference")
     (LaTeX-add-environments
      "example"
      "definition"
@@ -13,10 +13,6 @@
     (TeX-add-symbols
      "endexam")
     (TeX-run-style-hooks
-     "hyperref"
-     "setspace"
-     "listings"
-     "xcolor"
      "subfigure"
      "footnotesize"
      "tight"
@@ -43,10 +39,5 @@
      "sig-alternate"
      "preprint"
      "abstract"
-     "intro"
-     "background"
-     "mcdesign"
-     "savings"
-     "relatedwork"
-     "conclusion")))
+     "intro")))
 

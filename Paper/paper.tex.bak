@@ -22,6 +22,13 @@
 \usepackage[tight,footnotesize]{subfigure}
 
 
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage {tikz}
+\usetikzlibrary {positioning}
+\definecolor {processblue}{cmyk}{0.96,0,0,0}
+\usepackage{setspace}
+
 
 \renewcommand{\algorithmicrequire}{\textbf{Input:}}
 \renewcommand{\algorithmicensure}{\textbf{Output:}}
@@ -76,17 +83,22 @@
 
 
 \noindent
-{\bf Keywords: }Wireless Sensor Networks,
+{\bf Keywords: }Wireless Sensor Networks.
 \\
 
 \input{intro}
 \input{background}
+\input{mcdesign}
+\input{savings}
 \input{relatedwork}
+\input{conclusion}
+
+
 
 
 
 \bibliographystyle{plain}
-\bibliography{reference}
+\bibliography{bibliography}
 
 
 \end{document}

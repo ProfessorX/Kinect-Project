@@ -11,6 +11,7 @@ while ischar(tline)
     disp(tline)
     [partone, remaining] = strtok(tline, '//');
     [parttwo, remaining] = strtok(remaining, '//');
+    
     wline = [parttwo '/' partone remaining];
     fprintf(fid_new, '%s\r\n', wline);
     tline = fgetl(fid);
