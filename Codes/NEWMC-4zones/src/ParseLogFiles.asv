@@ -1,0 +1,60 @@
+function C = ParseLogFiles(filename)
+% function to parse log files
+fid = fopen(filename);
+parsedStruct = textscan(fid, '%s %s %s IN: %d OUT: %d');
+fclose(fid);
+% The result is of format:
+% <Date>
+% <time> <in> <out>
+% 00:00 to 00:30 %half hr slots
+inOutMat = [parsedStruct{4}, parsedStruct{5}];
+% finding reset times(idx) of counter
+matdiff = inOutMat(2:end,:) - inOutMat(1:end-1,:);
+resetPts = find(matdiff < 0) + 1;
+if isempty(resetPts)
+    newInOutMat = [inOutMat(1,:); matdiff];
+else
+    resetPts = [1, resetPts];
+    newInOutMat = [];
+    for i = 1:length(resetPts)
+        if i < length(resetPts)
+            newInOutMat = [newInOutMat; inOutMat(resetPts(i),:); inOutMat(resetPts(i)+1:resetPts(i+1)-1,:) - inOutMat(resetPts(i):resetPts(i+1)-2,:)];
+        else
+            newInOutMat = [newInOutMat; inOutMat(resetPts(i),:); inOutMat(resetPts(i)+1:end,:) - inOutMat(resetPts(i):end-1,:)];
+        end
+    end
+end
+parsedStruct{4} = newInOutMat(:,1);
+parsedStruct{5} = newInOutMat(:,2);
+% Splitting by date
+dates = unique(parsedStruct{1});
+dataStruct = {};
+finalStruct = {};
+
+%time slots
+k = 0;
+for i = 1:48 % there are 48 half hr slots in a day
+    str = sprintf('%2d:%2d', floor(k/60), mod(k/60))
+    k = k+30;
+end
+
+for i = 1:length(dates)
+    dataStruct{i}.date = dates(i);
+    idx = strcmp(parsedStruct{1}, dates(i));
+    dataStruct{i}.timelogs = parsedStruct{2}(idx);
+    dataStruct{i}.AmPm = parsedStruct{3}(idx);
+    dataStruct{i}.in = parsedStruct{4}(idx);
+    dataStruct{i}.out = parsedStruct{5}(idx);
+    for j = 1:length(dataStruct{i}.timelogs)
+        str = cell2mat(dataStruct{i}.timelogs(j));
+        if strcmp(dataStruct{i}.AmPm(j), 'AM')
+            str = [str, ' ', 'AM'];
+        else
+            str = [str, ' ', 'PM'];
+        end
+        dataStruct{i}.timenum(j) = datenum(str, 'HH:MM:SS PM');
+    end
+end
+% Windowing the timelogs
+
+

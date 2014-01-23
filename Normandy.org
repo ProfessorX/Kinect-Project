@@ -1,0 +1,17 @@
+* Final solutions to your first conference paper
+
+** Kinect
+
+** Occupancy
+
+** Markov Model to Predict
+
+** Discomfortability factor
+
+** Sum up
+
+
+
+
+* Comment
+  - Some stuff you would like to record when you are doing the project.

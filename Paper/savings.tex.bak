@@ -19,7 +19,6 @@ These automated control systems require full coverage of all above factors in or
 
 
 \subsection{Simulation approach}
-
 A net zero energy office building is simulated using the 'eQuest' building energy software adhering to Masdar Energy Design Guidelines (MEDG)based on the American Society of Heating, Refrigerating and Air-Conditioning (ASHRAE) 90.1. The office building is a two story building with a total floor area of $232m^2$. Each floor is divided into four office space with a floor area of $40m^2$ each. Windows are placed on the north, east and west walls of the building with overhangs having a projection factor (overhang depth/window height) of $0.6$. Two doors are placed on the north and east sides of the building. Windows and doors are not specified on the south wall to minimize heat gain through radiation. The window to gross wall area is kept at 29\%. The cooling system specified is a packaged direct expansion unit which delivers cooling through ducting.
 The office space is designed for a total occupancy of 60 persons with $4.6 m^2$ per person. The air requirements are specified according to ASHRAE standard 62.1. The office space is specified as 20cfm/person(Indoor air quality method 2011) each.
 
@@ -30,7 +29,7 @@ The office space is designed for a total occupancy of 60 persons with $4.6 m^2$ 
 \end{figure}
 
 
-We demonstrate the potential energy savings for applying an occupancy schedule into controlling the HVAC running time. We used the Masdar Energy Design Guidelines (MEDG)\footnote{Masdar Energy Design Guideline (MEDG) as a baseline for occupancy and thermostat set-points. MEG has been created to specifically serve as a mandatory framework for designing energy efficient buildings in Masdar City.
+We demonstrate the potential energy savings for applying an occupancy schedule into controlling the HVAC running time. We used the Masdar Energy Design Guidelines (MEDG)\footnote{Masdar Energy Design Guideline (MEDG) as a baseline for occupancy and thermostat set-points. MEG has been created to specifically serve as a mandatory framework for designing energy efficient buildings in Masdar City.}
 
 In the {\em first control case}, we tried to modify occupancy schedules and see the impact on energy consumption for space cooling.  The occupant's schedule  has by default one segment for weekdays and another for weekend. We substituted this schedule by a daily schedule  fed by data from our monitoring system. The potential energy saving difference between the two types of  scheduled  vs. unscheduled occupancy displayed in Figure \ref{fig:engsav}.
 
@@ -41,3 +40,11 @@ In the {\em first control case}, we tried to modify occupancy schedules and see 
 \end{figure}
 
 In the {\em second control case}, we modified the thermostat set-point schedule and convert it into more dynamic depend on our collected data. The set-point of thermostat is designed to meet the level of comfort, and here we rely on the occupancy density from our sample data to design customized set-point schedule for each day at different time. The results raise the energy consumption savings to 22.1\% as showing in figure  . There are a potential energy savings using customized occupancy/setpoint schedules. Even this small percentage of energy saving in favor of the custom schedule has a significant impact in large buildings. 
+
+\subsection{Energy Savings}
+
+\subsubsection{Ventilation Rate}
+
+\subsubsection{Temperature Outpoint}
+
+\subsubsection{Thermal Conformability}

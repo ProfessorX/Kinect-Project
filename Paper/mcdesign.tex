@@ -1,7 +1,59 @@
 \section{Design and Implementation}
 \label{sec:design}
 
-In this section, we explain how the use the Markov chain as a mean for modelling occupancy data. By predicting the future of occupancy of a zone\footnote{A zone is an open or closed part of a building whose HVAC system is controlled by a single sensor.}, an intelligent system can tune conditioning parameters gradually to reflect the predicted changes in time.
+
+\subsection{Kinect-based Occupancy Counter }
+Our  Occupancy Counter software is written using Microsoft Visual $C\sharp$ 2010,  project WPF application programmed using $C\sharp$ and XML languages.  OS used is Windows 7 with Kinect Studio v. 1. 7. 0 and Developer Toolkit Browser v. 1. 7. 0 installed.  Both type of Kinect is used and tested to be running on our software,  Xbox Kinect and Kinect for windows.  The software,  should be run in windows 7 or above,  with pre---installation of Kinect sensor drivers \emph{(shortly by installing Kinect SDK)}.
+
+ \begin{figure}[!ht]
+  \begin{center}
+	  	\includegraphics[width=1\columnwidth]{./images/112200.png}
+  \end{center}
+  \caption{Human detection,  tracking, counting and analysis}
+\end{figure}
+
+\begin{enumerate}
+  \item \textbf{Kinect initialization start:} This function will look up for any connected Kinect devices to your computer.  If no device is connected: a box message will appear to inform you about this fact.  The software display both RGB and Depth image,  Figure \ref{fig:guioverview} show the GUI of our software.
+
+     \begin{figure}[!ht]
+  \begin{center}
+	  	\includegraphics[width=1.1\columnwidth]{./images/swm.png}
+  \end{center}
+  \caption{Overview of the GUI of our Kinect-based Occupancy Counter x.}
+  \label{fig:guioverview}
+\end{figure}
+\item \textbf{Capture frame events}: As part of the initialization,  it makes sure that both RGB and Depth imaging are captured.
+ColorImageFrameReadyEventArgs:	The event arguments provided in a KinectSensor. ColorFrameReady event when a frame of color data is ready.
+\item \textbf{Depth camera feed generator:} Contains a per-frame buffer for depth data streamed out of a sensor.  Also provides access to the dimensions and format of the data in addition to mapping between skeleton and color coordinate spaces.  Once our Depth imaging is ready, we can start tracking blobs and draw markers.
+\item \textbf{Generate Markers :} This draws a rectangle blue box  with unique ID of people that is used is temporarily  for the detection of multiple subjects passing in the field view.
+
+\end{enumerate}
+
+
+\begin{figure} [!ht]
+  \begin{center}
+	  	\includegraphics[width=1.05\columnwidth]{./images/minisys.png}
+  \end{center}
+  \caption{The architecture of our tracking system}\label{fig:minisys}
+\end{figure}
+
+People tracking through the Kinect sensor can be done using two methods:people tracking via human posture and an existing skeletal tracking by MSDN library. Both methods are implemented into our software to help us draw a fair comparison.
+
+\begin{figure}[!ht]
+  \centering
+ 	  	\includegraphics[width=0.7\columnwidth]{./images/darkview.png}
+  \caption{Kinect sense even in dark view, which provide a high accuracy of data capturing}
+\end{figure}
+
+\subsection{Real World test-bed}
+A human mobility detection system was implemented through a whole floor of a laboratory building. Since there might be difficulties and challenges in any deployment system, the sensors cover the most important parts/directions of lab areas that most students use. 7 Kinect sensors implemented in an I-smart laboratory at Masdar institute, the lab is occupied by 9 professors each supervising around 6-8 students.
+
+\begin{figure} [!ht]
+  \begin{center}
+	  	\includegraphics[width=0.9\columnwidth]{./images/realworld.png}
+  \end{center}
+  \caption{The real world test-bed }\label{fig:tstbd}
+\end{figure} 
 
 \subsection{The Markov Chain Model}
 The prediction of the temporal dynamics of the occupancy in a zone is carried out using a Markov Chain (MC).  It represents the chain of states which a process goes through and is usually defined as a process which can be observed at a discrete set of times.  To design our observed data to easily fit the MC model, the number of occupants in each zone of the building is taken, and a threshold and a simple state is assigned to each observation after the threshold.
@@ -11,7 +63,17 @@ ${(E)mpty,  (F)ew,  (A)verage,  (C)rowd} $ to each zone.  i. e if in a zone the 
 
 Using the occupancy distribution at any time ${t}$ and the derived state vector, the state vector for time ${t + \triangle t}$  is predicted.  The predicted state vector for ${t + \triangle t} $,. allows  the prediction of zones that are likely to be more or less occupied.  A transition matrix is used to represent the probability of the transition from one state to another.  It is a two dimensional matrix encompassing the probability of all possible transitions  and refers to a square table with dimensions [Number of states X Number of states].   The element of the matrix at any location (i, j) is the probability of transition from $i^{th}$ state to $j^{th}$ state which is designated as $p _ {ij}$.   Figure \ref{fig:states} explains the state transitions drawn from equation \ref{equ:1} and the corresponding transition matrix of the three states representing the number of occupants in a building.
 
+\begin{figure}[!ht]
+  \centering
+ 	  	\includegraphics[width=0.9\columnwidth]{./images/mc.png}
+  \caption{XXX}
+\end{figure}
 
+\begin{figure}[!ht]
+  \centering
+ 	  	\includegraphics[width=0.9\columnwidth]{./images/mcc.png}
+  \caption{XXX}
+\end{figure}
 
 \begin{figure}[!ht]
 \centering
@@ -175,50 +237,3 @@ Normalizing the transition matrix along the row, we get Table \ref{table:tmp} be
 The matrix has many empty rows, which shows that it is inadequately trained. After finding the transition matrix, the system is ready to predict future occupancy.  For an observation of [zone 1, zone 2] equal to say [8, 13], we get the state vector [A, C].  The next state of the building can then be obtained by taking the row MC and finding the index of the maximum element in the row, which is CA, with probability 0. 0929.
 
 
-
-\subsection{Kinect-based Occupancy Counter software}
-Our  Occupancy Counter software is written using Microsoft Visual $C\sharp$ 2010,  project WPF application programmed using $C\sharp$ and XML languages.  OS used is Windows 7 with Kinect Studio v. 1. 7. 0 and Developer Toolkit Browser v. 1. 7. 0 installed.  Both type of Kinect is used and tested to be running on our software,  Xbox Kinect and Kinect for windows.  The software,  should be run in windows 7 or above,  with pre-installation of Kinect sensor drivers \emph{(shortly by installing Kinect SDK)}.
-
- \begin{figure}[!ht]
-  \begin{center}
-	  	\includegraphics[width=0.9\columnwidth]{./images/112200.png}
-  \end{center}
-  \caption{Human detection,  tracking, counting and analysis.}
-\end{figure}
-
-\begin{enumerate}
-  \item \textbf{Kinect initialization start:} This function will look up for any connected Kinect devices to your computer.  If no device is connected: a box message will appear to inform you about this fact.  The software display both RGB and Depth image,  Figure \ref{fig:guioverview} show the GUI of our software.
-
-     \begin{figure}[!ht]
-  \begin{center}
-	  	\includegraphics[width=0.9\columnwidth]{./images/swm.png}
-  \end{center}
-  \caption{Overview of the GUI of our Kinect-based Occupancy Counter x.}
-  \label{fig:guioverview}
-\end{figure}
-\item \textbf{Capture frame events}: As part of the initialization,  it makes sure that both RGB and Depth imaging are captured.
-ColorImageFrameReadyEventArgs:	The event arguments provided in a KinectSensor. ColorFrameReady event when a frame of color data is ready.
-\item \textbf{Depth camera feed generator:} Contains a per-frame buffer for depth data streamed out of a sensor.  Also provides access to the dimensions and format of the data in addition to mapping between skeleton and color coordinate spaces.  Once our Depth imaging is ready, we can start tracking blobs and draw markers.
-\item \textbf{Generate Markers :} This draws a rectangle blue box  with unique ID of people that is used is temporarily  for the detection of multiple subjects passing in the field view.
-
-\end{enumerate}
-
-
-\begin{figure} [!ht]
-  \begin{center}
-	  	\includegraphics[width=0.9\columnwidth]{./images/minisys.png}
-  \end{center}
-  \caption{The architecture of our tracking system}\label{fig:minisys}
-\end{figure}
-
-People tracking through the Kinect sensor can be done using two methods:people tracking via human posture and an existing skeletal tracking by MSDN library. Both methods are implemented into our software to help us draw a fair comparison.
-
-\subsection{Real World test-bed}
-A human mobility detection system was implemented through a whole floor of a laboratory building. Since there might be difficulties and challenges in any deployment system, the sensors cover the most important parts/directions of lab areas that most students use. 7 Kinect sensors implemented in an I-smart laboratory at Masdar institute, the lab is occupied by 9 professors each supervising around 6-8 students.
-
-\begin{figure} [!ht]
-  \begin{center}
-	  	\includegraphics[width=0.9\columnwidth]{./images/realworld.png}
-  \end{center}
-  \caption{The real world test-bed }\label{fig:tstbd}
-\end{figure} 

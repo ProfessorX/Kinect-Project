@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.19)  22 JAN 2014 18:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.19)  23 JAN 2014 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -734,115 +734,188 @@ Overfull \hbox (4.09926pt too wide) in paragraph at lines 29--1
 \T1/aer/m/n/10 Kinect pro-gram-ming in PC’s run by Win-dows, Linux,
  []
 
+<./images/112200.png, id=21, 423.0204pt x 117.0774pt>
+File: ./images/112200.png Graphic file (type png)
 
-Overfull \hbox (5.71497pt too wide) in paragraph at lines 18--35
+<use ./images/112200.png>
+Package pdftex.def Info: ./images/112200.png used on input line 10.
+(pdftex.def)             Requested size: 240.0pt x 66.42395pt.
+ <./images/swm.png, id=23, 445.665pt x 294.3798pt>
+File: ./images/swm.png Graphic file (type png)
+
+<use ./images/swm.png>
+Package pdftex.def Info: ./images/swm.png used on input line 20.
+(pdftex.def)             Requested size: 264.00146pt x 174.3833pt.
+
+Overfull \hbox (24.00146pt too wide) in paragraph at lines 20--21
+ [] 
+ []
+
+
+Overfull \hbox (10.25764pt too wide) in paragraph at lines 25--27
+\T1/aer/m/n/10 imag-ing are cap-tured. Col-orIm-age-FrameReadyEven-
+ []
+
+[3 <./images/k4w350.png (PNG copy)> <./images/112200.png> <./images/swm.png>]
+<./images/minisys.png, id=30, 414.8298pt x 279.444pt>
+File: ./images/minisys.png Graphic file (type png)
+
+<use ./images/minisys.png>
+Package pdftex.def Info: ./images/minisys.png used on input line 35.
+(pdftex.def)             Requested size: 252.00073pt x 169.75276pt.
+
+Overfull \hbox (12.00073pt too wide) in paragraph at lines 35--36
+ [] 
+ []
+
+<./images/darkview.png, id=31, 246.1697pt x 284.56313pt>
+File: ./images/darkview.png Graphic file (type png)
+
+<use ./images/darkview.png>
+Package pdftex.def Info: ./images/darkview.png used on input line 44.
+(pdftex.def)             Requested size: 167.99927pt x 194.20811pt.
+
+<./images/realworld.png, id=32, 453.8556pt x 550.2156pt>
+File: ./images/realworld.png Graphic file (type png)
+
+<use ./images/realworld.png>
+Package pdftex.def Info: ./images/realworld.png used on input line 53.
+(pdftex.def)             Requested size: 215.99854pt x 261.85886pt.
+ [4 <./images/minisys.png> <./images/darkview.png> <./images/realworld.png>] <.
+/images/mc.png, id=39, 615.7404pt x 323.7696pt>
+File: ./images/mc.png Graphic file (type png)
+
+<use ./images/mc.png>
+Package pdftex.def Info: ./images/mc.png used on input line 68.
+(pdftex.def)             Requested size: 215.99854pt x 113.57301pt.
+ <./images/mcc.png, id=40, 484.6908pt x 168.1482pt>
+File: ./images/mcc.png Graphic file (type png)
+
+<use ./images/mcc.png>
+Package pdftex.def Info: ./images/mcc.png used on input line 74.
+(pdftex.def)             Requested size: 215.99854pt x 74.93217pt.
+
+Overfull \hbox (5.71497pt too wide) in paragraph at lines 80--97
  [][] 
  []
 
-[3 <./images/k4w350.png (PNG copy)>]
-<./images/numberofkinect.png, id=33, 413.8662pt x 274.626pt>
+[5 <./images/mc.png> <./images/mcc.png>]
+<./images/numberofkinect.png, id=53, 413.8662pt x 274.626pt>
 File: ./images/numberofkinect.png Graphic file (type png)
 
 <use ./images/numberofkinect.png>
-Package pdftex.def Info: ./images/numberofkinect.png used on input line 94.
+Package pdftex.def Info: ./images/numberofkinect.png used on input line 156.
 (pdftex.def)             Requested size: 215.99854pt x 143.33014pt.
- [4 <./images/numberofkinect.png>]
-<./images/t1.png, id=40, 389.7762pt x 37.5804pt>
+
+<./images/t1.png, id=54, 389.7762pt x 37.5804pt>
 File: ./images/t1.png Graphic file (type png)
  <use ./images/t1.png>
-Package pdftex.def Info: ./images/t1.png used on input line 155.
+Package pdftex.def Info: ./images/t1.png used on input line 217.
 (pdftex.def)             Requested size: 215.99854pt x 20.82582pt.
 
-<./images/t2.png, id=41, 389.7762pt x 37.5804pt>
+<./images/t2.png, id=55, 389.7762pt x 37.5804pt>
 File: ./images/t2.png Graphic file (type png)
  <use ./images/t2.png>
-Package pdftex.def Info: ./images/t2.png used on input line 162.
+Package pdftex.def Info: ./images/t2.png used on input line 224.
 (pdftex.def)             Requested size: 215.99854pt x 20.82582pt.
 
-Overfull \hbox (3.27867pt too wide) in paragraph at lines 166--167
+Overfull \hbox (3.27867pt too wide) in paragraph at lines 228--229
 []\T1/aer/m/n/10 For this prob-lem, there are 16 pos-si-ble com-bined states
  []
 
 
-Overfull \hbox (3.01622pt too wide) in paragraph at lines 166--167
+Overfull \hbox (3.01622pt too wide) in paragraph at lines 228--229
 \T1/aer/m/n/10 called state vec-tors. The tran-si-tion ma-trix that is formed
  []
 
 
-Overfull \hbox (3.64095pt too wide) in paragraph at lines 166--167
+Overfull \hbox (3.64095pt too wide) in paragraph at lines 228--229
 \T1/aer/m/n/10 taken, and the el-e-ment at (row-number, column-number)
  []
 
-<./images/t4.png, id=42, 377.2494pt x 233.1912pt>
+[6 <./images/numberofkinect.png> <./images/t1.png>]
+<./images/t4.png, id=61, 377.2494pt x 233.1912pt>
 File: ./images/t4.png Graphic file (type png)
  <use ./images/t4.png>
-Package pdftex.def Info: ./images/t4.png used on input line 171.
+Package pdftex.def Info: ./images/t4.png used on input line 233.
 (pdftex.def)             Requested size: 215.99854pt x 133.51813pt.
-
-Overfull \hbox (4.92987pt too wide) in paragraph at lines 179--179
-[]\secfnt Kinect-based Oc-cu-pancy Counter soft-ware 
- []
-
-<./images/112200.png, id=43, 423.0204pt x 117.0774pt>
-File: ./images/112200.png Graphic file (type png)
-
-<use ./images/112200.png>
-Package pdftex.def Info: ./images/112200.png used on input line 184.
-(pdftex.def)             Requested size: 215.99854pt x 59.78014pt.
- [5 <./images/t1.png> <./images/t2.png> <./images/t4.png>] <./images/swm.png, i
-d=50, 445.665pt x 294.3798pt>
-File: ./images/swm.png Graphic file (type png)
- <use ./images/swm.png>
-Package pdftex.def Info: ./images/swm.png used on input line 194.
-(pdftex.def)             Requested size: 215.99854pt x 142.6752pt.
-
-Overfull \hbox (10.25764pt too wide) in paragraph at lines 199--201
-\T1/aer/m/n/10 imag-ing are cap-tured. Col-orIm-age-FrameReadyEven-
- []
-
-<./images/minisys.png, id=51, 414.8298pt x 279.444pt>
-File: ./images/minisys.png Graphic file (type png)
-
-<use ./images/minisys.png>
-Package pdftex.def Info: ./images/minisys.png used on input line 209.
-(pdftex.def)             Requested size: 215.99854pt x 145.50359pt.
-
-<./images/realworld.png, id=52, 453.8556pt x 550.2156pt>
-File: ./images/realworld.png Graphic file (type png)
-
-<use ./images/realworld.png>
-Package pdftex.def Info: ./images/realworld.png used on input line 221.
-(pdftex.def)             Requested size: 215.99854pt x 261.85886pt.
-) (./savings.tex [6 <./images/112200.png> <./images/swm.png> <./images/minisys.
-png> <./images/realworld.png>]
+)
+(./savings.tex
 Overfull \hbox (6.97597pt too wide) in paragraph at lines 6--7
 \T1/aer/m/n/10 dows (K4W) sen-sor by our de-vel-oped Occupancy-Counter
  []
 
-<./images/zonedivided.png, id=60, 291.489pt x 414.8298pt>
+<./images/occupancy.png, id=62, 758.835pt x 578.16pt>
+File: ./images/occupancy.png Graphic file (type png)
+
+<use ./images/occupancy.png>
+Package pdftex.def Info: ./images/occupancy.png used on input line 19.
+(pdftex.def)             Requested size: 215.99854pt x 164.56558pt.
+
+<./images/tusday.png, id=63, 546.54187pt x 472.76625pt>
+File: ./images/tusday.png Graphic file (type png)
+
+<use ./images/tusday.png>
+Package pdftex.def Info: ./images/tusday.png used on input line 25.
+(pdftex.def)             Requested size: 215.99854pt x 186.838pt.
+ [7 <./images/t2.png> <./images/t4.png> <./images/occupancy.png (PNG copy)>]
+<./images/zonedivided.png, id=70, 291.489pt x 414.8298pt>
 File: ./images/zonedivided.png Graphic file (type png)
 
 <use ./images/zonedivided.png>
-Package pdftex.def Info: ./images/zonedivided.png used on input line 28.
+Package pdftex.def Info: ./images/zonedivided.png used on input line 38.
 (pdftex.def)             Requested size: 215.99854pt x 307.39966pt.
 
-Overfull \hbox (5.24663pt too wide) in paragraph at lines 33--34
+Overfull \hbox (5.24663pt too wide) in paragraph at lines 43--44
 \T1/aer/m/n/10 run-ning time. We used the Mas-dar En-ergy De-sign Guide-
  []
 
-<./images/energysavings.png, id=61, 379.6584pt x 257.763pt>
-File: ./images/energysavings.png Graphic file (type png)
+<./images/sc.png, id=71, 555.9972pt x 216.3282pt>
+File: ./images/sc.png Graphic file (type png)
+ <use ./images/sc.png>
+Package pdftex.def Info: ./images/sc.png used on input line 49.
+(pdftex.def)             Requested size: 215.99854pt x 84.04086pt.
 
-<use ./images/energysavings.png>
-Package pdftex.def Info: ./images/energysavings.png used on input line 39.
-(pdftex.def)             Requested size: 215.99854pt x 146.64719pt.
- [7]) (./relatedwork.tex
+[8 <./images/tusday.png (PNG copy)> <./images/zonedivided.png>]
+<./images/vnt.png, id=78, 442.2924pt x 156.1032pt>
+File: ./images/vnt.png Graphic file (type png)
+ <use ./images/vnt.png>
+Package pdftex.def Info: ./images/vnt.png used on input line 61.
+(pdftex.def)             Requested size: 215.99854pt x 76.23636pt.
+
+<./images/inout.png, id=79, 1205.2528pt x 620.3175pt>
+File: ./images/inout.png Graphic file (type png)
+ <use ./images/inout.png>
+Package pdftex.def Info: ./images/inout.png used on input line 72.
+(pdftex.def)             Requested size: 240.0pt x 123.52177pt.
+
+<./images/crosscorrelation.png, id=80, 1205.2528pt x 620.3175pt>
+File: ./images/crosscorrelation.png Graphic file (type png)
+
+<use ./images/crosscorrelation.png>
+Package pdftex.def Info: ./images/crosscorrelation.png used on input line 77.
+(pdftex.def)             Requested size: 240.0pt x 123.52177pt.
+
+<./images/temp.png, id=81, 419.6478pt x 179.2296pt>
+File: ./images/temp.png Graphic file (type png)
+ <use ./images/temp.png>
+Package pdftex.def Info: ./images/temp.png used on input line 82.
+(pdftex.def)             Requested size: 240.0pt x 102.50377pt.
+
+<./images/temp2.png, id=82, 420.1296pt x 175.3752pt>
+File: ./images/temp2.png Graphic file (type png)
+ <use ./images/temp2.png>
+Package pdftex.def Info: ./images/temp2.png used on input line 87.
+(pdftex.def)             Requested size: 240.0pt x 100.18433pt.
+)
+(./relatedwork.tex
 Overfull \hbox (8.25685pt too wide) in paragraph at lines 4--5
 \T1/aer/m/n/10 lated to our ap-proach in analysing hu-man mo-bil-ity. Build-
  []
 
-[8 <./images/zonedivided.png> <./images/energysavings.png>]
-Underfull \vbox (badness 4229) has occurred while \output is active []
+[9 <./images/sc.png> <./images/vnt.png> <./images/inout.png (PNG copy)> <./imag
+es/crosscorrelation.png (PNG copy)> <./images/temp.png> <./images/temp2.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \hbox (5.10698pt too wide) in paragraph at lines 14--15
@@ -852,23 +925,23 @@ Overfull \hbox (5.10698pt too wide) in paragraph at lines 14--15
 
 Underfull \vbox (badness 6396) has occurred while \output is active []
 
- [9]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ [10]
+Underfull \vbox (badness 6396) has occurred while \output is active []
 
 )
-(./conclusion.tex [10]) (./paper.bbl) [11] (./paper.aux)
+(./conclusion.tex [11]) (./paper.bbl) [12] (./paper.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 13962 strings out of 493485
- 241986 string characters out of 3143525
- 290332 words of memory out of 3000000
- 16855 multiletter control sequences out of 15000+200000
+ 14011 strings out of 493485
+ 242993 string characters out of 3143525
+ 286792 words of memory out of 3000000
+ 16896 multiletter control sequences out of 15000+200000
  61190 words of font info for 99 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,17n,62p,3990b,915s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,17n,62p,3988b,915s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist
@@ -884,10 +957,10 @@ xlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
 utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (11 pages, 4152359 bytes).
+Output written on paper.pdf (12 pages, 4500927 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
- 80 compressed objects within 1 object stream
+ 151 PDF objects out of 1000 (max. 8388607)
+ 82 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
