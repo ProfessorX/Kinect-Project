@@ -5,11 +5,17 @@
     (LaTeX-add-labels
      "sec:introduction"
      "sec:implementation"
-     "fig:guioverview"
-     "fig:minisys"
+     "sec:testbed-setup"
+     "fig:system-arch"
+     "fig:kinect-deployment"
+     "sec:mark-chain-pred"
+     "fig:transitional-matrix"
+     "sec:simulation"
      "sec:results"
+     "fig:energy-consumption"
      "sec:concl-future-work")
     (TeX-run-style-hooks
+     "hyperref"
      "url"
      "graphicx"
      "array"

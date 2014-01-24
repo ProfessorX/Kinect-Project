@@ -7,5 +7,7 @@
      "herlihy:methodology"
      "Lamport:LaTeX"
      "salas:calculus"
-     "ref:Wang2011")))
+     "ref:Wang2011"
+     "ref:Erickson:2009"
+     "ref:Erickson:2010")))
 

@@ -1,5 +1,19 @@
 \begin{thebibliography}{1}
 
+\bibitem{ref:Erickson:2010}
+Varick~L. Erickson and Alberto~E. Cerpa.
+\newblock Occupancy based demand response hvac control strategy.
+\newblock In {\em Proceedings of the 2Nd ACM Workshop on Embedded Sensing
+  Systems for Energy-Efficiency in Building}, BuildSys '10, pages 7--12, 2010.
+
+\bibitem{ref:Erickson:2009}
+Varick~L. Erickson, Yiqing Lin, Ankur Kamthe, et~al.
+\newblock Energy efficient building environment control strategies using
+  real-time occupancy measurements.
+\newblock In {\em Proceedings of the First ACM Workshop on Embedded Sensing
+  Systems for Energy-Efficiency in Buildings}, BuildSys '09, pages 19--24,
+  2009.
+
 \bibitem{ref:Wang2011}
 Chuang Wang, Da~Yan, and Yi~Jiang.
 \newblock A novel approach for building occupancy simulation.
