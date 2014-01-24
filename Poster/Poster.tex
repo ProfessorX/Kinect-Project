@@ -15,7 +15,7 @@
 \usepackage{algorithmic}
 \usepackage{array}
 \usepackage{graphicx}
-
+\graphicspath{{./}{./Figure/}}
 
 \usepackage{url}
 
@@ -49,7 +49,7 @@ Some author
 
 
 \begin{abstract}
-  Nowadays, most building air-conditioning systems still operate on a
+  Nowadays, most building air conditioning systems still operate on a
   fixed schedule rather than real-time occupancy. In our study, we
   make an occupancy tracking software based on Kinect to reflect the
   number of people in a open lab. We then build a Markov Chain (MC)
@@ -72,8 +72,86 @@ Some author
 
 
 
+% What the heck am I reading.
+
+
 \section{Introduction}
 \label{sec:introduction}
+At the core of energy consumption in modern buildings is Heating Ventilation
+and Air Conditioning (HVAC) systems which are designed to operate at
+full capacity most of the time because it's often assumed a maximum
+occupancy. Although current HVAC systems are
+equipped with sensors, their management and control systems ignore the dynamic nature
+occupancy patterns in buildings. In addition, they are unable to
+proactively adjust to occupants' comfort levels. Understanding human mobility
+and occupancy patterns are key factors in successfully managing HVAC systems
+in buildings. The main contribution of our paper is
+to propose an energy-saving model based on occupancy patterns of human
+mobility in buildings. The most important features of the system are as follows:
+
+\begin{enumerate}
+\item  The \textit{real-time detection and tracking of human mobility}
+  in open lab provides accurate occupancy data of an entire floor
+  divided into 4 zones.
+\item  A \textit{occupancy counting software} carries out the detection,
+  tracking and monitoring process based on multiple Microsoft Kinect
+  for Windows (K4W) sensors distributed in key locations in the
+  building.
+\item A \textit{occupancy prediction mechanism} of the building is
+  introduced through the use of a MC which models the
+  collected occupancy data.  MC is a suitable because it captures the
+  temporary nature of occupancy variation along with inter-room
+  correlations. Unlike most other building occupancy techniques
+  described in~\ref{sec:relatedworks}, our approach is Kinect-based
+  and therefore could report live building occupancy states after
+  conducting simple calculations, which is also on-line.
+\end{enumerate}
+% This part should be concised.
+\par
+
+
+
+
+
+
+\section{Implementation}
+\label{sec:implementation}
+
+
+
+
+
+\section{Results}
+\label{sec:results}
+
+
+
+
+
+\section{Related Works}
+\label{sec:related-works}
+
+
+
+
+\section{Conclusion and Future Work}
+\label{sec:concl-future-work}
+
+
+
+
+
+
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{sigproc}
 
 
 \end{document}
+
+
+% End of the day
+% Successfully ``manage energy'' in buildings. What the heck.
