@@ -5,8 +5,9 @@
     (LaTeX-add-labels
      "sec:introduction"
      "sec:implementation"
+     "fig:guioverview"
+     "fig:minisys"
      "sec:results"
-     "sec:related-works"
      "sec:concl-future-work")
     (TeX-run-style-hooks
      "url"
