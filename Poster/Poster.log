@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.19)  25 JAN 2014 00:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.12.19)  25 JAN 2014 02:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,72 +393,76 @@ LaTeX Info: Redefining \nameref on input line 34.
 \@outlinefile=\write3
 \openout3 = `Poster.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 55.
+LaTeX Font Info:    Try loading font information for U+msb on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 55.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 60.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-<./Figure/minisys.png, id=42, 414.8298pt x 279.444pt>
+<./Figure/minisys.png, id=43, 414.8298pt x 279.444pt>
 File: ./Figure/minisys.png Graphic file (type png)
 
 <use ./Figure/minisys.png>
-Package pdftex.def Info: ./Figure/minisys.png used on input line 148.
-(pdftex.def)             Requested size: 207.41438pt x 139.72165pt.
+Package pdftex.def Info: ./Figure/minisys.png used on input line 154.
+(pdftex.def)             Requested size: 248.8998pt x 167.66768pt.
 
-<./Figure/realworld.png, id=44, 453.8556pt x 550.2156pt>
+Overfull \hbox (8.8998pt too wide) in paragraph at lines 154--155
+ [][] 
+ []
+
+<./Figure/realworld.png, id=45, 453.8556pt x 550.2156pt>
 File: ./Figure/realworld.png Graphic file (type png)
 
 <use ./Figure/realworld.png>
-Package pdftex.def Info: ./Figure/realworld.png used on input line 155.
-(pdftex.def)             Requested size: 136.15773pt x 165.06595pt.
+Package pdftex.def Info: ./Figure/realworld.png used on input line 161.
+(pdftex.def)             Requested size: 226.92725pt x 275.10713pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./Figure/minisys.png>] <./Figure/mcc.png, id=65, 484.6908pt x 168.1482pt>
+ <./Figure/minisys.png>] <./Figure/mcc.png, id=66, 484.6908pt x 168.1482pt>
 File: ./Figure/mcc.png Graphic file (type png)
 
 <use ./Figure/mcc.png>
-Package pdftex.def Info: ./Figure/mcc.png used on input line 196.
+Package pdftex.def Info: ./Figure/mcc.png used on input line 211.
 (pdftex.def)             Requested size: 218.10884pt x 75.66597pt.
- <./Figure/sc.png, id=67, 555.9972pt x 216.3282pt>
+ <./Figure/sc.png, id=68, 555.9972pt x 216.3282pt>
 File: ./Figure/sc.png Graphic file (type png)
 
 <use ./Figure/sc.png>
-Package pdftex.def Info: ./Figure/sc.png used on input line 241.
-(pdftex.def)             Requested size: 194.60193pt x 75.716pt.
+Package pdftex.def Info: ./Figure/sc.png used on input line 258.
+(pdftex.def)             Requested size: 250.19643pt x 97.34679pt.
  (./Poster.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
 pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.283 \end{document}
+l.298 \end{document}
                      [2 <./Figure/realworld.png> <./Figure/mcc.png> <./Figure/s
 c.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
  (./Poster.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 298.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 298.
 Package rerunfilecheck Info: File `Poster.out' has not changed.
 (rerunfilecheck)             Checksum: 480DE5903A773C12EA24CAA30FD11F62;518.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 298.
  ) 
 Here is how much of TeX's memory you used:
- 6508 strings out of 493485
- 90803 string characters out of 3143525
- 180922 words of memory out of 3000000
+ 6507 strings out of 493485
+ 90797 string characters out of 3143525
+ 179931 words of memory out of 3000000
  9691 multiletter control sequences out of 15000+200000
- 48393 words of font info for 65 fonts, out of 3000000 for 9000
+ 47315 words of font info for 64 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,10n,29p,454b,320s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -468,12 +472,11 @@ onts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic
 /uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on Poster.pdf (2 pages, 2964145 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb>
+Output written on Poster.pdf (2 pages, 2948962 bytes).
 PDF statistics:
- 117 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  19 named destinations out of 1000 (max. 500000)
  93 words of extra memory for PDF output out of 10000 (max. 10000000)
 

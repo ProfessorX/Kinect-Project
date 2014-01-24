@@ -1,0 +1,63 @@
+\section{Methodology}
+
+We adapt the least-squares regression used in \cite{rodgersetal2013} to estimate DTE for an electrical vehicle, which also applies to internal combustion vehicles. We first describe the single-driver approach. The drivers' running fuel consumption is computed using a formula provided in \cite{lightner2013}, with the engine data as inputs, for each slice of sampling time, and added up over a trip to give the total consumption. Fuel consumption is affected by different variables, e.g., driving behavior, vehicle models, average speed and traffic conditions. Training the regression model using the trip data from each driver, we can estimate the DTE for the same drivers in real time.
+We then extend this single-driver modeling technique to a multi-driver setting. The multivariate regression model in \cite{freund2006} is a blackbox approach, without the detailed knowledge of driving conditions. The regression model estimates the fuel consumption for a route \(i\) by
+\begin{equation}
+F_i(D_j) = \beta_{i0} + \beta_{i1} \chi_{i1} + \beta_{i2} \chi_{i2} + \ldots + \beta_{im} \chi_{im}
+\label{eqroumod}
+\end{equation}
+Where $(\beta_{ik})$ is a set of $(m)$ unknown coefficients that are determined from the historical data (i.e., the training set). The variables $(\chi)$ are the measureable data obtained from the vehicle (e.g., speed, engine parameters), and the response variable, $(F_i)$, is the fuel consumption in a particular route $(i)$ given the data of driver $(D_j)$.
+Solving $(\beta_i)$ in Eqn. \ref{eqroumod}:
+\begin{equation}
+\beta_i = (\chi^T \chi)^{-1} \chi^T F_i
+\label{eqsolbeta}
+\end{equation}
+We focus on internal combustion vehicles.
+The variables \(\chi\) we employ are listed as follows:
+\[
+\chi = \begin{bmatrix}
+	1 & \Delta T_a(r_i,D_1) & V_{ave}(r_i,D_1) & I_{t}(r_i,D_1) & D_{c}(r_i,D_1) \\[0.3em]
+	1 & \Delta T_a(r_i,D_2) & V_{ave}(r_i,D_2) & I_{t}(r_i,D_2) & D_{c}(r_i,D_2) \\[0.3em]
+	\vdots & \vdots & \vdots & \vdots & \vdots \\[0.3em]
+	1 & \Delta T_a(r_i,D_j) & V_{ave}(r_i,D_j) & I_{t}(r_i,D_j) & D_{c}(r_i,D_j)
+	\end{bmatrix}
+\label{eqchimatrix}
+\]
+Where $(T_a(r_i,D_j))$  denotes the ambient temperature of route $(i)$ for the historical data, included to consider that the ambient temperature will affect engine load via the heater or the air conditioner. $(V_{ave}(r_i,D_j))$ denotes the average speed of driving in route $(i)$ , since different speeds will cause different fuel consumption in the route. $(I_{t}(r_i,D_j))$  denotes the total idle time in route $(i)$ ; we assume that different traffic condition results in different idle time in the route. $(D_{c}(r_i,D_j))$  denotes the driver and the displacement of the vehicle, since the fuel consumption rate is different for different vehicle types. Here, $(j)$ is the total number of the historical data points.
+%
+%Our objective is to estimate the fuel consumption of a driver who has never driven on particular route. Based on the regression model of the fuel consumption in a particular route, we can find the relationship among different routes and then estimate the fuel consumption of a driver in that route. 
+
+We next describe the multi-driver extension. 
+Say driver $(a)$ never drove in route $(x)$ before, and we want to estimate the fuel consumption $(F_x(D_a))$ of that driver in that route given the ambient temperature, the average speed, and the idle time. We can establish the relationship between the route $(x)$  and routes $(1 \ldots r)$ using the multivariate regression model shown in Eqn. \ref{eqpremod}. The regression model $(F_r(D_{1 \ldots m}))$ is the training data set. Since we want to use the data of driver $(k)$ in a different route to determine their fuel consumption in the route they have never driven, the training data set should be $(F_r(D_{1 \ldots m}), k \in \{1 \ldots m\})$. However, since $(F_x)$  does not include the data of driver $(a)$, the regression model has to be trained without the data of driver $(a)$, resulting in Eqn. \ref{eqpremod}. Also note that the number of drivers $(m)$ should be greater than the number of routes $(r)$ in order to avoid the ill-condition of the regression model.
+
+\begin{equation}
+F_x(D_{1 \ldots m}) = \gamma_0 + \gamma_1F_1(D_{1 \ldots m}) + \ldots +  \gamma_rF_r(D_{1 \ldots m})
+\label{eqpremod}
+\end{equation}
+for \(a \notin \{1 \ldots m\}\)
+\\\\
+Where (\(F_i(D_{1 \ldots m})\)) denotes the fuel consumption of drivers (\(1 \ldots m\))  in route (\(i\)) given ambient temperature, average speed and idle time.
+Solving for \(\gamma_i\)  in Eqn. \ref{eqroumod}:
+\begin{equation}
+\gamma_i = (\overline{F}^T \overline{F})^{-1}\overline{F}^T F_n
+\label{eqgammod}
+\end{equation}
+Where
+\begin{equation}
+\notag
+\overline{F} = \begin{bmatrix}
+	1 & F_1(D_1) & \ldots & F_r(D_1) \\[0.3em]
+	1 & F_1(D_2) & \ldots & F_r(D_2) \\[0.3em]
+	\vdots & \vdots & \vdots & \vdots \\[0.3em]
+	1 & F_1(D_m) & \ldots & F_r(D_m)
+	\end{bmatrix}
+,
+F_n = \begin{bmatrix}
+	F_x(D_1) \\[0.3em]
+	F_x(D_2) \\[0.3em]
+	\vdots \\[0.3em]
+	F_x(D_m)
+	\end{bmatrix}
+\end{equation}
+
+Since we have \(F_{1 \ldots r}(D_{1 \ldots m}), k \in \{1 \ldots m\}\), \(F_{1 \ldots r}(D_k)\)  can be determined and substituted into Eqn. \ref{eqpremod} to compute \(F_x(D_a)\).

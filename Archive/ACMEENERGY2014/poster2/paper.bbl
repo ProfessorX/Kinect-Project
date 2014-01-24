@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{CT:WP:2013}
+CloudThink Consortium.
+\newblock Cloudthink homepage.
+\newblock Web page at \url{http://www.cloud-think.com}, 12 2013.
+
+\bibitem{freund2006}
+R.J. Freund, W.J. Wilson, and P.~Sa.
+\newblock {\em Regression Analysis}.
+\newblock Regression Analysis Series. Elsevier Science, 2006.
+
+\bibitem{lightner2013}
+Bruce~D. Lighter.
+\newblock Map- and maf-based air/fuel flow calculator.
+\newblock Web page at \url{http://www.lightner.net/obd2guru/IMAP_AFcalc.html},
+  10 2013.
+
+\bibitem{rodgersetal2013}
+L.~Rodgers, E.~Wilhelm, and D.~Frey.
+\newblock Conventional and novel methods for estimating an electric vehicle’s
+  ‘distance to empty’.
+\newblock In {\em Proceedings of the ASME 2013 International Design Engineering
+  Technical Conferences and the International Conference on Advanced Vehicle
+  Technologies}, Portland, Oregon, USA, 2013.
+
+\end{thebibliography}

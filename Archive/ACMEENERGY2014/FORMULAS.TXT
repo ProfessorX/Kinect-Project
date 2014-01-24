@@ -1,0 +1,118 @@
+
+This section derives equations that quantify the \(D_{TE}\) algorithm. The fuel stored in the tank, \(F\), is consumed as the vehicle is driven a distance \(x\). An important metric used frequently in this discussion is the average fuel intensity, \(p\), which is defined as the quantify of fuel, \(\Delta F\), consumed over a distance, \(\Delta x\), and has unit of liter/meter:
+\begin{equation}
+\overline{p} \equiv \frac{\Delta F}{\Delta x}
+\label{eqafi}
+\end{equation}
+The future average fuel intensity, \(\overline{p}_f(t)\), can be determined by evaluating Equation \ref{eqafi} between the current time, \(t\), and final time, \(t_f\) :
+\begin{equation}
+\overline{p}_f(t) = \frac{F(t)}{x(t_f) - x(t_0)}
+\label{eqfafi}
+\end{equation}
+Where \(t \in \{t_0, t_f\}\), \(t_0\) is the time when the tank is full, and \(t_f\) is the time of fuel exhaustion, \(F(t)\) is the remaining fuel in the tank at time \(t\) . Therefore, \(D_{TE}\) can be written as:
+\begin{equation}
+D_{TE}(t) = x(t_f) - x(t)
+\label{eqdtex}
+\end{equation}
+Combining Equation \ref{eqfafi} and \ref{eqdtex} yields:
+\begin{equation}
+D_{TE}(t) = \frac{F(t)}{\overline{p}_f(t)}
+\label{eqdtet}
+\end{equation}
+According to historical data, the average fuel intensity in the past can be calculated. A long-term average fuel intensity, \(\overline{p}_{long}(t)\) , can be the average over the past 100 km or the average over the past 100 data. In the conventional method, \(\overline{p}_{long}\) is often a good estimate for future fuel consumption. However, an improved algorithm would be one that could adjust the value of \(\overline{p}_{long}\) up or down to have a better estimation of  \(\overline{p}_f\) according to future driving condition. Hence, \(\overline{p}_f\)  is given an adjustment factor, \(y\) , that yields:
+\begin{equation}
+\overline{p}_f(t) = y(t)\overline{p}_{long}(t)
+\label{eqpfty}
+\end{equation}
+Combining Equation \ref{eqdtet} and \ref{eqpfty} yields:
+\begin{equation}
+D_{TE}(t) = \frac{F(t)}{y(t)\overline{p}_{long}(t)}
+\label{eqdteypl}
+\end{equation}
+Since \(y\)  cannot be determined perfectly beforehand, an estimate \(\hat{y}\) can be made when an unknown residual error, \(\varepsilon\) , is introduced:
+\begin{equation}
+y(t) = \hat{y}(t) + \varepsilon(t)
+\label{eqadjy}
+\end{equation}
+Rearranging:
+\begin{equation}
+\hat{y}(t) = y(t) - \varepsilon(t)
+\label{eqadjyrear}
+\end{equation}
+Then the Equation \ref{eqdteypl} can be written as:
+\begin{equation}
+\hat{D}_{TE}(t) = \frac{F(t)}{\hat{y}(t)\overline{p}_{long}(t)}
+\label{eqadjdteypl}
+\end{equation}
+Therefore, the discrete form of Equation \ref{eqadjdteypl} is:
+\begin{equation}
+\hat{D}_{TE}(t_i) = \frac{F(t_i)}{\hat{y}(t_i)\overline{p}_{long}(t_i)}
+\label{eqadjdteypldisc}
+\end{equation}
+The goal is to minimize the residual error in Equation \ref{eqadjdteypl}. This is accomplished using a multivariate linear regression model. The model uses historical data to learn the relationship between a set of measured explanatory variables, \(\chi\) , and the response variable, \(\hat{y}\) . Assuming a linear model of the form \cite{freund2006}:
+\begin{equation}
+\hat{y}(t_i) = \beta_0 + \beta_1 \chi_{i1} + \beta_2 \chi_{i2} + \ldots + \beta_m \chi_{nm}
+\label{eqlinmod}
+\end{equation}
+Solving for \(\beta\) :
+\begin{equation}
+\beta = (\chi^T \chi)^{-1} \chi^T y
+\label{eqsolbeta}
+\end{equation}
+To get \(\beta\), \(y\)  in Equation \ref{eqsolbeta} is determined using Equation \ref{eqgetyti}.
+\begin{equation}
+y(t_i) = \frac{\overline{p}_f(t_i)}{\overline{p}_{long}(t_i)}
+\label{eqgetyti}
+\end{equation}
+Where \(\overline{p}_f(t_i)\)  is calculated according to Equation \ref{eqfafi}, the fuel remaining in the tank in Equation \ref{eqfafi} is calculated by using Equation \ref{eqfc}; since the time between each data point is known, the fuel consumption can be determined. Subtracting fuel consumption from original fuel level leaves the fuel remaining in the tank. In this study, the amount of fuel consumed in one trial was under 6 liters; therefore, the \(D_{TE}\)  is calculated within a 6-liter range.
+The value \(\chi\) in this study is computed as follows: 
+\begin{equation}
+\chi = \begin{bmatrix}
+	1 & \Delta T_a(t_1) & \Delta v_{ave}(t_1) \\[0.3em]
+	1 & \Delta T_a(t_2) & \Delta v_{ave}(t_2) \\[0.3em]
+	\vdots & \vdots & \vdots \\[0.3em]
+	1 & \Delta T_a(t_n) & \Delta v_{ave}(t_n)
+	\end{bmatrix}
+\label{eqchimatrix}
+\end{equation}
+Where the \(\Delta T_a(t_i) \) shown in Equation \ref{eqchimatrix} is change in ambient temperature.
+\begin{equation}
+\Delta T_a(t_i) \equiv | \overline{T}_{a,f}(t_i) - 25 | - | \overline{T}_{a,p}(t_i) - 25 |
+\label{eqtati}
+\end{equation}
+Where \(\overline{T}_{a,p}(t_i)\)  is the average ambient temperature in the past and \(\overline{T}_{a,f}(t_i)\)  is the average ambient temperature estimated of the future, which can be obtained from meteorological services online. The difference from 25°C is taken since it is assumed that temperatures above and below 25°C will cause an increase auxiliary energy.
+And \(\Delta v_{ave}(t_i)\) displayed in Equation \ref{eqchimatrix} is change in average speed.
+\begin{equation}
+\Delta v_{ave}(t_i) \equiv \overline{v}_f(t_i) - \overline{v}_p(t_i)
+\label{eqvave}
+\end{equation}
+Where \(\overline{v}_p(t_i)\) is the average speed in the past and \(\overline{v}_f(t_i)\) is the average speed estimated of the future, which can be obtained from online services if the driving route of a driver is known.
+
+
+
+===================
+
+
+The fuel consumption formula specified in \cite{lightner2013} is as follows:
+\begin{equation}
+f_c = \frac{RPM \times MAP \times VE \times EDIS \times m_{air}}{ IAT \times 2 \times 60 \times R \times AFR \times gL}
+\label{eqfc}
+\end{equation}
+Where \(f_c\) is the fuel consumption rate in unit of liter/second, \(RPM\) is RPM of the vehicle, \(MAP\) is the manifold absolute pressure (kPa), \(VE\) is volumetric efficiency which is 0.85 in this study, \(EDIS\) is engine displacement in liters, \(m_{air}\) is the average molecular mass of air (28.97g/mole), \(IAT\) is intake air temperature in Kelvin, \(R\) is 8.314 J/°K/mole, \(AFR\) is air/fuel mixing ratio (14.7) and \(gL\) is gasoline gram per liter (728.3068 gram/liter)
+\\
+The total fuel consumption of a trip can be calculated as
+
+\begin{equation}
+F = \int\limits_{t=0}^{t_{trip}}f_c(t)\mathrm{d}t
+\label{eqtfc}
+\end{equation}
+
+where \(t_{trip}\) is the total time for the trip is the total time of the trip. The actula historical data of the car recorded by the OBD is discrete; therefore, the trapezoidal rule is utilized, and Equation \ref{eqtfc} becomes
+
+\begin{equation}
+F = \sum_{i=1}^{n} \frac{f_c(t_i)+f_c(t_{i-1})}{2} \times (t_i - t_{i-1}) 
+\label{eqtfcd}
+\end{equation}
+
+Where \(t_i\) stands for the time of sampling from \(n\) available samples, and \(f_c(t_i)\) denotes the fuel consumption rate at time \(t_i\). According to Equation \ref{eqtfcd}, the total fuel consumption for a particular driver in a particular route can be obtained.
+\\\\

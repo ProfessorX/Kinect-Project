@@ -1,0 +1,7 @@
+\section{Introduction} \label{sec:intro}
+
+While in-vehicle information systems are increasingly sophisticated, the information presented from vehicles is not always accurate. One of the major features is Distance-to-Empty (DTE) or alternatively, the fuel consumption for the remaining journey, which are hindered by several uncertain factors, such as speed, terrain, traffic and driving behavior, as well as the intrinsic characteristics of vehicles (e.g., fuel tank capacity, engine load). Accurate prediction of fuel consumption, and thereby DTE, is vital in allowing drivers to know not only when they need to refuel, but also the fuel consumption along different possible routes.
+
+Previous work relies on using a single driver's personal history for prediction. In contrast, we focus on a social approach by using other drivers' data to predict the DTE for a given driver along a new route. For example, driver \(A\) may be interested in finding out how much fuel she is likely to consume along a route \(X\) that is not traveled previously. However, if other drivers \(B\) and \(C\) have driven route \(X\), and other routes \(Y\) and \(Z\) that are also traveled by \(A\) before, we will be able to obtain an estimation based on the differences among the routes, and the differences among the drivers' fuel consumption patterns on the same routes.
+
+To this end, we build on the linear regression approach developed by \cite{rodgersetal2013} using a single driver, and extend it to consider multi-driver settings.
